@@ -1,11 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <meta name = "decrp" content="내용"/>
+    <meta name = "key" content="웹">
 </head>
 <body>
-    
+   <h1>d</h1>
+   <br/> 
 </body>
 </html>
+<!-----
+html 태그 문법으로 열고 닫는 태그의 한 쌍으로 이루어 져있습니다 <html></html> 등
+혹은 스스로 열리고 닫히는 태그도 존재합니다 <img/> <input/> 등
+html 문서의 기본 뼈대 구조는 <html></html> 태그로 전체를 감싸고 있고, 사이트의 주요 내용들이 들어 있는 머리부분인 <head></head>부분과 실제 화면이 그려지는 <body></body>로 이루어져 있습니다.
+<head>태그에는 주요하게 외부 플랫폼에 사이트 정보를 제공해주는 meta 태그와 브라우저 상의 탭 이름에 해당하는 title 태그, 그리고 뒤에서 배울 스타일 속성을 작성하는 <style>태그영역과 스크립트를 작성하는 <script> 태그 영역으로 이루어 져있습니다.
+meta 태그는 구글이나 네이버 같은 포털 사이트에서 여러분의 웹 사이트를 내걸때, 사용자들에게 보여줄 주요 사이트 정보들을 긁어오는 곳입니다. <meta name="description" content="HTML meta tag page"> <meta name="keyword" content="HTML, meta, tag, element, reference"> <meta name="author" content="TCPSchool">
+title은 브라우저의 탭 부분에 표시되는 웹사이트 제목입니다. 클래스101|준비물까지 챙겨주는 온라인 스쿨~ 이부분이 바로 그 제목이겠죠?
+<body>태그 안에는 실제로 화면에 그려지는 태그들이 존재합니다.
+<h1></h1> : 제목을 나타낼 때 주로 사용하는 태그, 굵기와 크기가 1부터 6까지 작아집니다.
+<p></p> : 문단을 나타내는 태그, 태그 사이에 글을 작성하면 다음 태그와는 자동으로 이격되서 문단의 성격을 갖습니다.
+<span></span> : 긴 글 중간에 특정 글자의 색을 바꾸거나 스타일을 바꾸고 싶을 때 태그 안에서 사용하는 태그입니다.
+<ul> <li></li> </ul> : 화면상에서 리스트를 만들어줄 때 사용하는 유용한 태그 입니다.
+<img src="이미지 주소"/> : 이미지를 나타내는 태그, src라는 속성에 이미지 주소를 넣습니다.
+<button>버튼이름</button> : 화면상에 사용자가 누를 수 있는 버튼을 생성합니다. 버튼을 눌렀을때 실행되는 이벤트는 <button onclick="함수()">버튼 이름 </button>과 같이 onclick 속성에 자바스크립트 함수를 연결하여 정의합니다. 이는 자바스크립트 때 또 배웁니다.
+<br/> : 스스로 닫히는 태그로 태그 사이의 줄바꿈을 할때 사용합니다.
+<hr/> : 줄바꿈을 하면서 수평선을 그려줍니다. -->
+
+<!--- 옷을 입히는 문법이 CSS
+head 태그 내부에서 <style></style> 태그 사이에 작성하거나, 외부의 main.css파일을 생성한 후 작성하여 html 파일에서 불러와 사용할 수 있습니다.
+<link href="./main.css" rel="stylesheet"> : 이 경우 main.css는 main.html 파일과 같은 위치에 있다는 것을 뜻함
+
+. : class 방식은 .을 쓰는 방식입니다. <p class="title">의 경우 .title로 불러서 옷을 입힐 수가 있습니다. 여러 이름을 가질 수가 있습니다. <p class="title title2">
+#:id 방식은 #을 씁니다. <p id="title">의 경우 #title로 불러서 옷을 입힐 수가 있습니다. 오직 한 아이디 이름만 가질 수 있습니다.
+.title {} 중괄호 안에 옷(=속성)을 입혀줍니다.
+#title {} 중괄호 안에 옷(=속성)을 입혀줍니다.
+
+태그자체를 부를 수도 있습니다 그럼 해당 태그는 html 문서 전체에 걸쳐 옷이 입혀집니다. p {color:red} 라면 p 태그 안의 글자들은 전부 빨간색이 됩니다.
+<p>대한<span class="target">민국</span></p>
+
+
+
+p 태그 안의 span 태그
+
+p > span {
+
+color:red;
+
+}
+
+
+
+또한 태그안의 선택자를 꼭 찝어서 스타일을 줄 수도 있음
+
+
+
+p > .target {
+
+color:red
+
+}
+
+
+
+[자주 사용되는 css 속성]
+배경관련
+background-color
+background-image
+
+테두리
+border
+border-radius
+border-top-left-radius
+
+사이즈
+width
+height
+
+폰트
+font-size
+font-weight
+font-famliy
+color
+
+간격
+margin
+padding
+
+[JS]
+console.log (출력)
+alert(팝업)
+let, const(얘는 수정 불가)
+사칙연산 + - / * %
+true, false boolean 형
+문자열 ", ' , 벡틱을 이용한 표현
+문자열안에 변수 넣기
+부등호를 통한 true, false 값 부여 모습도 가능 - 기본적으로 부등호는 참 또는 거짓의 값만 알려준다
+객체 object - key와 value
+배열 array - index 0 번째 부터 시작, push로 추가
+객체와 배열 복합 구조 - 값 꺼내기
+주석 //
+for
+if
+객체와 배열 복합 구조를 이용한 값 꺼내기
+영화 api 데이터
+<https://api.themoviedb.org/3/movie/popular?api_key=10923b261ba94d897ac6b81148314a3f&page=1>
+
+수학시간에 배운 f(x) = y처럼 우리도 f(x) 부분인 함수를 만들 수 있음
+function x(){
+
+
+
+}
+
+
+
+function x(){
+
+return value;
+
+}
+
+
+
+let y = x()
+
+console.log(y)
+
+
+
+function x(num1,num2){
+
+return num1 + num2;
+
+}
+
+
+
+function x(){
+
+alert()
+
+}
+
+
+
+자바스크립트에서는 기본적으로 제공해주는 유용한 함수들이 있음
+우리가 맨처음에 사용했었던 것처럼 alert 또한 그 중 하나! - 바로 팝업창을 띄워주는 자바스크립트 함수
+split - 문자열을 배열로 만들어주는 제공함수
+join - 배열을 문자열로 연결시켜주는 함수
+이 자바스크립트를 좀 더 쉽게 사용할 수 있게 도와주는 Jquery(제이쿼리)는 챕터4 영화 리뷰 사이트로 백엔드 연습하기에서 살펴보기로 합니-->
